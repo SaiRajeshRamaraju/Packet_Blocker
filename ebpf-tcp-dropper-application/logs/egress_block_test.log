@@ -1,0 +1,17 @@
+[attach] /home/arch/testing/ebpf-tcp-dropper-application/bin/dropper --cgroup /sys/fs/cgroup/myapp --egress --port 4040  
+[run] executing inside cgroup: bash -lc 'curl -v --max-time 5 http://127.0.0.1:5555/'
+Attached egress dropper to /sys/fs/cgroup/myapp
+Press Ctrl-C to detach and exit.
+/etc/profile.d/editor.sh: line 2: export: `=': not a valid identifier
+/etc/profile.d/editor.sh: line 3: export: `=vim': not a valid identifier
+/etc/profile.d/editor.sh: line 2: export: `=': not a valid identifier
+/etc/profile.d/editor.sh: line 3: export: `=vim': not a valid identifier
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:5555...
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0* Connection timed out after 5002 milliseconds
+  0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0
+* closing connection #0
+curl: (28) Connection timed out after 5002 milliseconds
+[cleanup] detaching dropper (sending SIGINT)
+Detaching...
